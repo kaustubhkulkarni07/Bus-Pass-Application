@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'admin_registration_page.dart'; // Ensure this file exists
 import 'registration_page.dart'; // Ensure this file exists
 
 class UserSelectionPage extends StatelessWidget {
@@ -24,17 +23,7 @@ class UserSelectionPage extends StatelessWidget {
             const SizedBox(height: 30),
 
             // Admin Selection Card
-            _buildSelectionCard(
-              title: "ADMIN",
-              icon: Icons.admin_panel_settings,
-              color: Colors.blue,
-              onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => AdminRegistrationPage()),
-                );
-              },
-            ),
+
 
             const SizedBox(height: 20),
 

@@ -21,6 +21,14 @@ class _SplashPageState extends State<SplashPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 30.0, left: 20, right: 20),
+              child: Text(
+                "Loknete Hanumantrao Patil Charitable Trust,\nAdarsh Institute of Technology and Research Centre, (AITRC)",
+                style: TextStyle(fontSize: 14, color: Colors.grey[600], fontWeight: FontWeight.w500),
+                textAlign: TextAlign.center,
+              ),
+            ),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,

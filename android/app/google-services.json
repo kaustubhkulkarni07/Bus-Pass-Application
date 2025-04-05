@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1094489315981",
+    "project_id": "e-bus-pass-ac934",
+    "storage_bucket": "e-bus-pass-ac934.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094489315981:android:9cf58f3181ce1f4918a0c4",
+        "android_client_info": {
+          "package_name": "com.example.bus_pass_application"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQUXdzd2eKqtFkHobsHHxUedpewmkw50U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

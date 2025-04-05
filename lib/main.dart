@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'splash_page.dart'; // Import Splash Screen
-import 'registration_page.dart'; 
 import 'user_selection_page.dart';
-
+import 'bus_pass_selection.dart';
 void main() {
   runApp(const MyApp());
 }
@@ -29,30 +28,35 @@ class _LoginPageState extends State<LoginPage> {
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  void _validateLogin() {
-    String username = _usernameController.text;
-    String password = _passwordController.text;
+      void _validateLogin() {
+        String username = _usernameController.text;
+        String password = _passwordController.text;
 
-    if (username == "admin" && password == "admin") {
-      // ✅ Show Success Message
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text("Login Successful"),
-          backgroundColor: Colors.green,
-          duration: Duration(seconds: 2),
-        ),
-      );
-    } else {
-      // ❌ Show Error Message
-      ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(
-          content: Text("Invalid Username or Password!"),
-          backgroundColor: Colors.red,
-        ),
-      );
-    }
-  }
-
+        if (username == "admin" && password == "admin") {
+          // ✅ Show Success Message
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("Login Successful"),
+              backgroundColor: Colors.green,
+              duration: Duration(seconds: 2),
+            ),
+          );
+          
+          // Navigate to Bus Pass Selection Screen
+          Navigator.pushReplacement(
+            context,
+            MaterialPageRoute(builder: (context) => BusPassSelectionScreen()),
+          );
+        } else {
+          // ❌ Show Error Message
+          ScaffoldMessenger.of(context).showSnackBar(
+            const SnackBar(
+              content: Text("Invalid Username or Password!"),
+              backgroundColor: Colors.red,
+            ),
+          );
+        }
+      }
   @override
   void dispose() {
     _usernameController.dispose();
